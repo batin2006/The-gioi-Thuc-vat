@@ -1,14 +1,15 @@
 <!DOCTYPE html>
 <html lang="vi">
-
 <head>
   <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Rừng & Vườn Quốc Gia</title>
   <link rel="stylesheet" href="css/style.css">
 </head>
-
 <body>
+  <!-- Yêu cầu 3: Skip link -->
+  <a href="#main-content" class="skip-link">Chuyển đến Nội dung chính</a>
+
   <header>
     <nav>
       <ul>
@@ -17,23 +18,24 @@
         <li><a href="parks.html">Rừng & Vườn Quốc Gia</a></li>
       </ul>
     </nav>
-    <img src="images/botanical_garden.jpg" width="200" alt="Khu vườn nhiệt đới tràn ngập cây xanh và dương xỉ.">
-    <h1>Hệ Sinh Thái Rừng Tự Nhiên</h1>
+    <img src="images/forest_header.jpg" width="200" alt="Phong cảnh rừng quốc gia bạt ngàn">
+    <h1>Rừng & Vườn Quốc Gia</h1>
   </header>
   
-  <main>
-    <div>
-      <img src="cây sòi.png" alt="Cây sồi cổ thụ với bộ rễ khổng lồ phủ đầy rêu xanh" width="100">
-      <img src="rừng tre.png" alt="Rừng trúc xanh ngát vươn thẳng lên bầu trời" width="100">
-      <img src="nấm.png" alt="Thân cây đổ mục nát được bao phủ bởi thảm rêu và nấm rừng" width="100">
-      <img src="rừng cây dương sỉ.png" alt="Thung lũng dương xỉ mọc um tùm dưới tán rừng rậm" width="100">
-     
+  <main id="main-content">
+    <p>Khám phá các hệ sinh thái rừng nguyên sinh và các khu vườn quốc gia nổi tiếng với đa dạng sinh học cao.</p>
+    
+    <!-- Yêu cầu 6: Áp dụng tính năng grid (ít nhất 2 cột) cho phần tử cha -->
+    <div class="grid-container">
+      <img src="images/cuc_phuong.jpg" alt="Vườn quốc gia Cúc Phương" width="250">
+      <img src="images/phong_nha.jpg" alt="Vườn quốc gia Phong Nha - Kẻ Bàng" width="250">
+      <img src="images/cat_tien.jpg" alt="Vườn quốc gia Cát Tiên" width="250">
+      <img src="images/hoang_lien.jpg" alt="Vườn quốc gia Hoàng Liên" width="250">
     </div>
   </main>
   
   <footer>
-    <p>Giao diện gốc được thiết kế bởi Colleen van Lent cho khóa học <a href="https://www.coursera.org/specializations/web-design">Web Design for Everybody</a>. Nội dung đã được biên tập lại theo chủ đề Thực vật.</p>
+    <p>Giao diện gốc được thiết kế bởi Colleen van Lent. Nội dung biên tập theo chủ đề Thực vật.</p>
   </footer>
 </body>
-
 </html>
