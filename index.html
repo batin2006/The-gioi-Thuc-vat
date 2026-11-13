@@ -1,15 +1,15 @@
 <!DOCTYPE html>
 <html lang="vi">
-
 <head>
   <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width">
-  <title>Thế Giới Thực Vật Xanh</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Thế Giới Thực Vật Xanh - Trang Chủ</title>
   <link rel="stylesheet" href="css/style.css">
 </head>
-
 <body>
-  <a href="#main-content">Chuyển đến nội dung chính</a>
+  <!-- Yêu cầu 3: Liên kết bỏ qua (Skip link) sử dụng position và :focus -->
+  <a href="#main-content" class="skip-link">Chuyển đến Nội dung chính</a>
+
   <header>
     <nav>
       <ul>
@@ -18,19 +18,21 @@
         <li><a href="parks.html">Rừng & Vườn Quốc Gia</a></li>
       </ul>
     </nav>
-    <img src="images/Khu vườn nhiệt đới.pgn" width="200" alt="Khu vườn nhiệt đới tràn ngập cây xanh và dương xỉ.">
+    <img src="images/Khu vườn nhiệt đới.png" width="200" alt="Khu vườn nhiệt đới tràn ngập cây xanh và dương xỉ.">
     <h1>Khám Phá Thế Giới Thực Vật</h1>
   </header>
   
-<main id="main-content">
-    <p>Thực vật đóng vai trò thiết yếu trong việc duy trì sự sống trên Trái Đất. Từ những chậu cây nhỏ xinh trong nhà cho đến các khu <a href="https://vi.wikipedia.org/wiki/R%E1%BB%ABng_m%C6%B0a_nhi%E1%BB%87t_%C4%91%E1%BB%9Bi">rừng mưa nhiệt đới</a> bạt ngàn, thế giới thực vật luôn ẩn chứa vẻ đẹp kỳ diệu và sức sống mãnh liệt.</p>
-
-    <p>Trang web này lưu giữ bộ sưu tập hình ảnh về các loài thực vật phổ biến. Bạn có thể tìm hiểu thêm về các loài cây quý hiếm tại <a href="https://www.kew.org/">Vườn Bách Thảo Hoàng Gia Kew</a> hoặc khám phá hệ sinh thái tại các <a href="https://vi.wikipedia.org/wiki/Danh_s%C3%A1ch_v%C6%B0%E1%BB%9Dn_qu%E1%BB%91c_gia_t%E1%BA%A1i_Vi%E1%BB%87t_Nam">Vườn Quốc Gia Việt Nam</a>.</p>
+  <main id="main-content">
+    <p>Thực vật đóng vai trò thiết yếu trong việc duy trì sự sống trên Trái Đất. Từ những chậu cây nhỏ xinh trong nhà cho đến các khu rừng mưa nhiệt đới bạt ngàn, thế giới thực vật luôn ẩn chứa vẻ đẹp kỳ diệu và sức sống mãnh liệt.</p>
+    
+    <!-- Yêu cầu 1: Đảm bảo có ít nhất một hình ảnh trên trang -->
+    <div style="text-align: center; margin-top: 20px;">
+      <img src="images/cay_xanh_1.jpg" alt="Cây xanh trong khuôn viên xanh mát" width="300">
+    </div>
   </main>
   
   <footer>
-    <p>Giao diện gốc được thiết kế bởi Colleen van Lent cho khóa học <a href="https://www.coursera.org/specializations/web-design">Web Design for Everybody</a>. Nội dung đã được biên tập lại theo chủ đề Thực vật.</p>
+    <p>Giao diện gốc được thiết kế bởi Colleen van Lent cho khóa học Web Design for Everybody. Nội dung đã được biên tập lại theo chủ đề Thực vật.</p>
   </footer>
 </body>
-
 </html>
