@@ -1,14 +1,15 @@
 <!DOCTYPE html>
 <html lang="vi">
-
 <head>
   <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Cây Cảnh & Hoa</title>
   <link rel="stylesheet" href="css/style.css">
 </head>
-
 <body>
+  <!-- Yêu cầu 3: Skip link cho trang này -->
+  <a href="#main-content" class="skip-link">Chuyển đến Nội dung chính</a>
+
   <header>
     <nav>
       <ul>
@@ -17,25 +18,24 @@
         <li><a href="parks.html">Rừng & Vườn Quốc Gia</a></li>
       </ul>
     </nav>
-    <img src="images/botanical_garden.jpg" width="200" alt="Khu vườn nhiệt đới tràn ngập cây xanh và dương xỉ.">
+    <img src="images/botanical_garden.jpg" width="200" alt="Khu vườn tổng quan">
     <h1>Cây Cảnh & Các Loài Hoa</h1>
   </header>
   
-  <main>
-    <div>
-      <img src="images/trầu bà.png" alt="Cây trầu bà lá xẻ Monstera xanh mướt trong chậu gốm" width="100">
-      <img src="images/hoa anh đào.png" alt="Những bông hoa anh đào màu hồng nhạt nở rộ trên cành" width="100">
-      <img src="images/sen đá.png" alt="Bộ sưu tập các loại sen đá và xương rồng mini" width="100">
-      <img src="images/tulip.png" alt="Hoa tulip rực rỡ sắc màu dưới ánh nắng ban mai" width="100">
-      <img src="images/cây dương sỉ.png" alt="Chậu dương xỉ treo xanh tốt trước hiên nhà" width="100">
-      <img src="images/lá phong đỏ.png" alt="Cây phong lá đỏ Nhật Bản với tán lá rực rỡ" width="100">
-     
+  <main id="main-content">
+    <!-- Yêu cầu 1: Chứa ít nhất năm (5) hình ảnh. Yêu cầu 7 & 9: Sử dụng flex và nth-child -->
+    <div class="flex-container">
+      <img src="images/trầu bà.png" alt="Cây trầu bà lá xẻ" width="150">
+      <img src="images/hoa anh đào.png" alt="Hoa anh đào" width="150">
+      <img src="images/sen đá.png" alt="Sen đá" width="150">
+      <img src="images/tulip.png" alt="Hoa tulip" width="150">
+      <img src="images/cây dương sỉ.png" alt="Cây dương sỉ" width="150">
+      <img src="images/lá phong đỏ.png" alt="Lá phong đỏ" width="150">
     </div>
   </main>
   
   <footer>
-    <p>Giao diện gốc được thiết kế bởi Colleen van Lent cho khóa học <a href="https://www.coursera.org/specializations/web-design">Web Design for Everybody</a>. Nội dung đã được biên tập lại theo chủ đề Thực vật.</p>
+    <p>Giao diện gốc được thiết kế bởi Colleen van Lent. Nội dung biên tập theo chủ đề Thực vật.</p>
   </footer>
 </body>
-
 </html>
