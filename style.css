@@ -12,37 +12,71 @@ body {
 header {
   background-color: #e2f0d9;
   padding: 20px;
+}/* Thiết lập chung cho toàn bộ trang */
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-size: 110%;
+  background-color: #f4f9f4;
+  color: #1e352f;
+  margin: 0;
+  padding: 0;
 }
 
-/* Yêu cầu 4: Thay đổi phần tử nav để sử dụng khối nội tuyến (inline-block) và có chiều rộng khoảng 80% */
+/* Yêu cầu 3: Sử dụng position và lớp giả focus để tạo kiểu cho liên kết "Chuyển đến Nội dung chính" */
+.skip-link {
+  position: absolute;
+  top: -50px;
+  left: 0;
+  background-color: #2e7d32;
+  color: white;
+  padding: 10px 15px;
+  z-index: 1000;
+  text-decoration: none;
+  font-weight: bold;
+  transition: top 0.3s ease-in-out;
+}
+
+.skip-link:focus {
+  top: 0; /* Chỉ hiển thị khi liên kết được tập trung bằng bàn phím (phím Tab) */
+}
+
+/* Định dạng thẻ tiêu đề (header) */
+header {
+  background-color: #e2f0d9;
+  padding: 20px;
+}
+
+/* Yêu cầu 4 & 7: Tạo kiểu điều hướng hấp dẫn, sử dụng flexbox và ít nhất 3 thuộc tính CSS */
 nav {
   background-color: #c8e6c9;
   padding: 10px;
-  display: inline-block; /* Hoặc có thể dùng display: block; tùy theo layout, đề yêu cầu khối nội tuyến */
-  width: 80%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
 }
 
 nav ul {
   list-style-type: none;
   padding: 0;
   margin: 0;
-}
-
-/* Yêu cầu 3: Nhận xét kiểu dáng hiện có cho phần tử li (ví dụ: các mục nằm ngang hoặc định dạng chiều rộng cố định) */
-nav li {
-  display: inline-block;
-  width: 150px;
+  display: flex;
+  gap: 15px;
 }
 
 nav a {
   text-decoration: none;
   color: #2c5e3b;
   font-weight: bold;
+  transition: all 0.3s ease;
 }
 
-/* Yêu cầu 5: Sử dụng bộ chọn hậu duệ để chỉ tạo kiểu cho hình ảnh trong điều hướng để có chiều rộng khoảng 10% */
-nav img {
-  width: 10%;
+/* Hiệu ứng tương tác cho menu khi hover (đáp ứng yêu cầu dùng nhiều thuộc tính CSS) */
+nav a:hover {
+  color: #ffffff;
+  background-color: #2e7d32;
+  padding: 6px 12px;
+  border-radius: 4px;
 }
 
 /* Định dạng tiêu đề chính (h1) */
@@ -55,7 +89,6 @@ h1 {
 /* Định dạng thẻ nội dung chính (main) */
 main {
   background-color: #f9f9f9;
-  font-size: 100%;
   padding: 20px;
 }
 
@@ -64,32 +97,57 @@ p {
   line-height: 1.6;
 }
 
-/* Yêu cầu 6 & 8: Tạo kiểu cho lớp lưới (grid) sử dụng lưới hai cột (40% mỗi cột), canh chỉnh và khoảng cách */
-.grid {
+/* Yêu cầu 5: Tạo kiểu cho TẤT CẢ các hình ảnh bằng mô hình hộp (đường viền, đệm, bán kính viền) */
+img {
+  border: 3px solid #a3d9a5;
+  padding: 6px;
+  border-radius: 8px;
+  background-color: #ffffff;
+  max-width: 100%;
+  height: auto;
+}
+
+/* Yêu cầu 6: Áp dụng thuộc tính grid cho ít nhất một phần tử cha (ít nhất hai cột) */
+.grid-container {
   display: grid;
-  grid-template-columns: 40% 40%; /* Mỗi cột xấp xỉ 40% */
-  justify-content: center; /* Điều chỉnh theo ý muốn giao diện */
-  align-items: center;     /* Căn giữa theo trục dọc */
-  row-gap: 20px;           /* Khoảng cách hàng */
-  column-gap: 20px;
+  grid-template-columns: repeat(2, 1fr); /* Lưới hai cột đều nhau */
+  gap: 20px;
+  justify-items: center;
+  align-items: center;
+  margin-top: 20px;
 }
 
-/* Yêu cầu 7: Sử dụng bộ chọn hậu duệ để chỉ tạo kiểu cho các hình ảnh trong lớp lưới để có chiều rộng 100% */
-.grid img {
-  width: 100%;
-}
-
-/* Yêu cầu 9: Tạo kiểu cho lớp flex để sử dụng flex, kết hợp flex-wrap và justify-content */
-.flex {
+/* Yêu cầu 7: Áp dụng thuộc tính flex cho phần tử chứa ảnh */
+.flex-container {
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-around; /* Hoặc space-between tùy giao diện mẫu */
+  justify-content: center;
+  gap: 20px;
+}
+
+/* Yêu cầu 8: Cập nhật ít nhất một phần tử bằng lớp giả di chuột (hover) thú vị */
+.flex-container img:hover {
+  transform: scale(1.05) rotate(1deg);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Yêu cầu 9: Thực hiện bộ chọn nth-child để tạo hình dạng đường viền bán kính khác nhau cho các ảnh */
+.flex-container img:nth-child(odd) {
+  border-radius: 30% 10% 30% 10%;
+  border-color: #81c784;
+}
+
+.flex-container img:nth-child(even) {
+  border-radius: 10% 30% 10% 30%;
+  border-color: #ffb74d;
 }
 
 /* Định dạng chân trang (footer) */
 footer {
   background-color: #d8d8d8;
   padding: 15px;
-  font-size: 80%;
+  font-size: 90%;
   margin-top: 20px;
+  text-align: center;
 }
